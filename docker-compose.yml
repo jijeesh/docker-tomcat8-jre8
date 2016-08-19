@@ -1,0 +1,11 @@
+version: '2'
+services:
+  j2Service:
+    image: j2service:latest
+    ports:
+     - "172.31.29.253:8002:8080"
+    volumes:
+     - /J2/j2Service/webapps:/usr/local/tomcat/webapps
+    restart: always
+    environment:
+       PRODUCTION: "true"
